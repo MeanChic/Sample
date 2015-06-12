@@ -16,7 +16,7 @@
 		select * from addr where name=#{name}
 	</select>
 
-	<insert id="writeOk" parameterType="com.java.addr.dto.AddressDto">
+	<insert id="writeOk" parameterType="com.java.address.dto.AddressDto">
 	<![CDATA[
 		insert into addr values(addr_num_seq.nextval, #{name}, #{phone}, #{email})
 	]]>
