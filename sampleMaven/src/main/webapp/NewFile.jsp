@@ -11,12 +11,12 @@
 <body>
 	<a href="${root}">dd</a>
 	
-	<a href = "${root }/addr/write.do">주소록 작성</a>	&nbsp;&nbsp;
+	<a href = "${root }/address/write.do">주소록 작성</a>	&nbsp;&nbsp;
 	
-	<a href = "${root }/addr/select.do">주소록 검색</a>	&nbsp;&nbsp;
+	<a href = "${root }/address/select.do">주소록 검색</a>	&nbsp;&nbsp;
 	
-	<a href = "${root }/addr/delete.do">주소록 삭제</a> &nbsp;&nbsp;
+	<a href = "${root }/address/delete.do">주소록 삭제</a> &nbsp;&nbsp;
 	
-	<a href = "${root }/addr/update.do">주소록 수정</a> &nbsp;&nbsp;
+	<a href = "${root }/address/update.do">주소록 수정</a> &nbsp;&nbsp;
 </body>
 </html>

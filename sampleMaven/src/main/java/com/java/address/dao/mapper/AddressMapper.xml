@@ -3,5 +3,15 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="dao.AddressMapper">
-
+	<delete id="delete" parameterType="String">
+		delete from addr where name=#{name}
+	</delete>
+	
+		<update id="addrUpdate" parameterType="com.java.address.dto.AddressDto">
+		update addr set phone=#{phone}, email=#{email} where num=#{num}
+	</update>
+	
+	<select id="addrSelect" parameterType="String" resultType="com.java.address.dto.AddressDto">
+		select * from addr where name=#{name}
+	</select>
 </mapper>
