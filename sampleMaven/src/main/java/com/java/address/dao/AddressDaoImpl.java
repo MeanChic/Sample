@@ -8,4 +8,8 @@ import com.java.address.dto.AddressDto;
 
 @Component
 public class AddressDaoImpl implements AddressDao {
+	
+	@Autowired
+	private SqlSessionTemplate sqlSession;
+	
 }
