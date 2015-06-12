@@ -3,5 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="dao.AddressMapper">
-
+	<insert id="writeOk" parameterType="com.java.addr.dto.AddressDto">
+	<![CDATA[
+		insert into addr values(addr_num_seq.nextval, #{name}, #{phone}, #{email})
+	]]>
+	</insert>
+	
 </mapper>
