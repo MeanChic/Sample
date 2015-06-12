@@ -3,6 +3,7 @@
 body{
 	font-size:13px;
 	font-fmaily:맑은 고딕;
+<<<<<<< HEAD
 }
 
 a:link {
@@ -18,4 +19,29 @@ a:visited {
 a:hover {
 	text-decoration:underline;
 	color:black
+=======
+	text-decoration:none;
+	color:black;
+}
+
+a{
+	font-size:13px;
+	font-fmaily:맑은 고딕;
+	text-decoration:none;
+	color:blue;
+}
+
+a:visited {
+	font-size:13px;
+	font-fmaily:맑은 고딕;
+	text-decoration:none;
+	color:#ff80c0;
+}
+
+a:hover {
+	font-size:13px;
+	font-fmaily:맑은 고딕;
+	text-decoration:none;
+	color:#0080ff;
+>>>>>>> branch 'master' of https://github.com/MeanChic/Sample.git
 }

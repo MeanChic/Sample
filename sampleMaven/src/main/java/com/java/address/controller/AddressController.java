@@ -16,11 +16,30 @@ import com.java.address.service.AddressService;
 
 @Controller
 public class AddressController {
-	final Logger logger=Logger.getLogger(this.getClass().getName());
+	
+	private Logger logger=Logger.getLogger(this.getClass().getName());
 	
 	@Autowired
 	private AddressService addService;
 	
+	@RequestMapping(value="/address/write.do", method=RequestMethod.GET)
+	public String write(HttpServletRequest req, HttpServletResponse res){
+		logger.info("write------------------");
+		
+		return "address/write";
+	}
+	
+	@RequestMapping(value="/address/write.do", method=RequestMethod.POST)
+	public ModelAndView write(HttpServletRequest req, HttpServletResponse res, AddressDto addressDto){
+		logger.info("writeOk------------------");
+		
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("addressDto", addressDto);
+		
+		addService.writeOk(mav);
+		
+		return mav;
+	}
 	
 	@RequestMapping(value="/address/delete.do", method=RequestMethod.GET)
 	public String delete(HttpServletRequest request, HttpServletResponse response){

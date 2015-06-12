@@ -15,6 +15,10 @@ public class AddressDaoImpl implements AddressDao {
 	
 	@Autowired
 	private SqlSessionTemplate sqlSession;
+
+	public int writeOk(AddressDto addressDto) {
+		return sqlSession.insert("writeOk", addressDto);
+	}
 	
 	@Override
 	public int delete(String name) {
