@@ -1,31 +1,29 @@
 package com.java.address.service;
 
 import java.util.Map;
-<<<<<<< HEAD
+
 import java.util.logging.Logger;
 
-import javax.servlet.http.HttpServletRequest;
-=======
->>>>>>> branch 'master' of https://github.com/MeanChic/Sample.git
+import  javax.servlet.http.HttpServletRequest;
+import  javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
-<<<<<<< HEAD
+
 
 import com.java.address.dto.AddressDto;
-=======
->>>>>>> branch 'master' of https://github.com/MeanChic/Sample.git
+
 
 import com.java.address.dao.AddressDao;
 import com.java.address.dto.AddressDto;
 
 @Component
 public class AddressServiceImpl implements AddressService {
-<<<<<<< HEAD
+
 
 	
-	final Logger logger=Logger.getLogger(this.getClass().getName());
+	final Logger logger= Logger.getLogger(this.getClass().getName());
 	
 	@Autowired
 	private AddressDao addDao;
@@ -69,18 +67,18 @@ public class AddressServiceImpl implements AddressService {
 		System.out.println("Ok2");
 		mav.addObject("check", check);
 		mav.setViewName("address/updateOk");
-=======
-	@Autowired
-	private AddressDao addressDao;
+	}
+
+
 
 	public void writeOk(ModelAndView mav) {
 		Map<String, Object> map=mav.getModelMap();
 		AddressDto addressDto=(AddressDto)map.get("addressDto");
 		
-		int check=addressDao.writeOk(addressDto);
+		int check=addDao.writeOk(addressDto);
 		
 		mav.addObject("check", check);
 		mav.setViewName("address/writeOk");
->>>>>>> branch 'master' of https://github.com/MeanChic/Sample.git
+
 	}
 }
